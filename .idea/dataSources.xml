@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="oa_crm_db_test@192.168.110.222" uuid="a1954cdd-f431-4acb-af56-ba4b2be33130">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://192.168.110.222:5432/oa_crm_db_test</jdbc-url>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fan.back.rest.mapper.CrmTOpportunityMapper">
+
+    <resultMap id="BaseResultMap" type="com.fan.back.rest.entity.CrmTOpportunity">
+            <id property="opportunityId" column="opportunity_id" jdbcType="INTEGER"/>
+            <result property="quotationId" column="quotation_id" jdbcType="INTEGER"/>
+            <result property="customerName" column="customer_name" jdbcType="VARCHAR"/>
+            <result property="opportunityNum" column="opportunity_num" jdbcType="VARCHAR"/>
+            <result property="customerAddressProvince" column="customer_address_province" jdbcType="VARCHAR"/>
+            <result property="customerAddressCity" column="customer_address_city" jdbcType="VARCHAR"/>
+            <result property="customerAddressDistrict" column="customer_address_district" jdbcType="VARCHAR"/>
+            <result property="customerAddressDetail" column="customer_address_detail" jdbcType="VARCHAR"/>
+            <result property="zipCode" column="zip_code" jdbcType="VARCHAR"/>
+            <result property="customerMainBusiness" column="customer_main_business" jdbcType="VARCHAR"/>
+            <result property="customerIndustry" column="customer_industry" jdbcType="VARCHAR"/>
+            <result property="customerIndustryInfluence" column="customer_industry_influence" jdbcType="INTEGER"/>
+            <result property="subCustomerIndustry" column="sub_customer_industry" jdbcType="VARCHAR"/>
+            <result property="deliveryDate" column="delivery_date" jdbcType="DATE"/>
+            <result property="isOldCustomer" column="is_old_customer" jdbcType="INTEGER"/>
+            <result property="opportunityName" column="opportunity_name" jdbcType="VARCHAR"/>
+            <result property="opportunityStage" column="opportunity_stage" jdbcType="INTEGER"/>
+            <result property="opportunityStageSequence" column="opportunity_stage_sequence" jdbcType="VARCHAR"/>
+            <result property="mainOperatorType" column="main_operator_type" jdbcType="INTEGER"/>
+            <result property="channelName" column="channel_name" jdbcType="VARCHAR"/>
+            <result property="providerName" column="provider_name" jdbcType="VARCHAR"/>
+            <result property="tenderType" column="tender_type" jdbcType="INTEGER"/>
+            <result property="customerProjectName" column="customer_project_name" jdbcType="VARCHAR"/>
+            <result property="isShortlistedRequire" column="is_shortlisted_require" jdbcType="INTEGER"/>
+            <result property="isInitiation" column="is_initiation" jdbcType="INTEGER"/>
+            <result property="isFundsInvested" column="is_funds_invested" jdbcType="INTEGER"/>
+            <result property="expectedValue" column="expected_value" jdbcType="INTEGER"/>
+            <result property="focusPoint" column="focus_point" jdbcType="INTEGER"/>
+            <result property="projectBudget" column="project_budget" jdbcType="INTEGER"/>
+            <result property="budgetSource" column="budget_source" jdbcType="INTEGER"/>
+            <result property="expectedTenderDate" column="expected_tender_date" jdbcType="DATE"/>
+            <result property="nextStageDate" column="next_stage_date" jdbcType="DATE"/>
+            <result property="backgroundPurpose" column="background_purpose" jdbcType="INTEGER"/>
+            <result property="backgroundPurposeNotes" column="background_purpose_notes" jdbcType="VARCHAR"/>
+            <result property="projectSponsorInfo" column="project_sponsor_info" jdbcType="VARCHAR"/>
+            <result property="customerBenefits" column="customer_benefits" jdbcType="VARCHAR"/>
+            <result property="companyBenefits" column="company_benefits" jdbcType="VARCHAR"/>
+            <result property="oppotunityNotes" column="oppotunity_notes" jdbcType="VARCHAR"/>
+            <result property="customerOrgNotes" column="customer_org_notes" jdbcType="VARCHAR"/>
+            <result property="opportunityFollowupActions" column="opportunity_followup_actions" jdbcType="VARCHAR"/>
+            <result property="winReason" column="win_reason" jdbcType="VARCHAR"/>
+            <result property="lostReason" column="lost_reason" jdbcType="VARCHAR"/>
+            <result property="giveupReason" column="giveup_reason" jdbcType="VARCHAR"/>
+            <result property="stopReason" column="stop_reason" jdbcType="VARCHAR"/>
+            <result property="summary" column="summary" jdbcType="VARCHAR"/>
+            <result property="isDelivered" column="is_delivered" jdbcType="INTEGER"/>
+            <result property="isPaid" column="is_paid" jdbcType="INTEGER"/>
+            <result property="paymentDate" column="payment_date" jdbcType="DATE"/>
+            <result property="isAccepted" column="is_accepted" jdbcType="INTEGER"/>
+            <result property="creatorId" column="creator_id" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="operatorId" column="operator_id" jdbcType="INTEGER"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="ownerId" column="owner_id" jdbcType="INTEGER"/>
+            <result property="isDeleted" column="is_deleted" jdbcType="INTEGER"/>
+            <result property="isDraft" column="is_draft" jdbcType="INTEGER"/>
+            <result property="alertSentDate" column="alert_sent_date" jdbcType="DATE"/>
+            <result property="isStageDraft" column="is_stage_draft" jdbcType="INTEGER"/>
+            <result property="signingStatus" column="signing_status" jdbcType="INTEGER"/>
+            <result property="signingDate" column="signing_date" jdbcType="DATE"/>
+            <result property="signingComment" column="signing_comment" jdbcType="VARCHAR"/>
+            <result property="leaderInfoConfirmFlg" column="leader_info_confirm_flg" jdbcType="INTEGER"/>
+            <result property="leaderVisitCustomerFlg" column="leader_visit_customer_flg" jdbcType="INTEGER"/>
+            <result property="leaderValidOpportunityFlg" column="leader_valid_opportunity_flg" jdbcType="INTEGER"/>
+            <result property="contractId" column="contract_id" jdbcType="INTEGER"/>
+            <result property="isFiling" column="is_filing" jdbcType="INTEGER"/>
+            <result property="filingTime" column="filing_time" jdbcType="TIMESTAMP"/>
+            <result property="coreBusiness" column="core_business" jdbcType="VARCHAR"/>
+            <result property="channelId" column="channel_id" jdbcType="INTEGER"/>
+            <result property="successPossibility" column="success_possibility" jdbcType="INTEGER"/>
+            <result property="nextOpportunityStage" column="next_opportunity_stage" jdbcType="INTEGER"/>
+            <result property="expectedSignDate" column="expected_sign_date" jdbcType="DATE"/>
+            <result property="customerId" column="customer_id" jdbcType="INTEGER"/>
+            <result property="projectUsedSystem" column="project_used_system" jdbcType="VARCHAR"/>
+            <result property="isvId" column="isv_id" jdbcType="INTEGER"/>
+            <result property="isvName" column="isv_name" jdbcType="VARCHAR"/>
+            <result property="expectedFirstPaymentCollectionDate" column="expected_first_payment_collection_date" jdbcType="DATE"/>
+            <result property="biddingStatus" column="bidding_status" jdbcType="INTEGER"/>
+            <result property="systemOnlineDate" column="system_online_date" jdbcType="DATE"/>
+            <result property="dbBudget" column="db_budget" jdbcType="INTEGER"/>
+            <result property="productTypeId" column="product_type_id" jdbcType="INTEGER"/>
+            <result property="signedChannelId" column="signed_channel_id" jdbcType="INTEGER"/>
+            <result property="systemChosenReason" column="system_chosen_reason" jdbcType="VARCHAR"/>
+            <result property="systemStartDate" column="system_start_date" jdbcType="DATE"/>
+            <result property="projectHasDocument" column="project_has_document" jdbcType="INTEGER"/>
+            <result property="projectHasMeeting" column="project_has_meeting" jdbcType="INTEGER"/>
+            <result property="projectNeedSupport" column="project_need_support" jdbcType="VARCHAR"/>
+            <result property="isKnownTenderContent" column="is_known_tender_content" jdbcType="INTEGER"/>
+            <result property="isOurParamInTender" column="is_our_param_in_tender" jdbcType="INTEGER"/>
+            <result property="isKnownTenderProcess" column="is_known_tender_process" jdbcType="INTEGER"/>
+            <result property="isMasterTenderProcess" column="is_master_tender_process" jdbcType="INTEGER"/>
+            <result property="isKnownAllExperts" column="is_known_all_experts" jdbcType="INTEGER"/>
+            <result property="isSupportedByExperts" column="is_supported_by_experts" jdbcType="INTEGER"/>
+            <result property="competitorInfo" column="competitor_info" jdbcType="VARCHAR"/>
+            <result property="l1CreatedTime" column="l1_created_time" jdbcType="TIMESTAMP"/>
+            <result property="l2CreatedTime" column="l2_created_time" jdbcType="TIMESTAMP"/>
+            <result property="l3CreatedTime" column="l3_created_time" jdbcType="TIMESTAMP"/>
+            <result property="l4CreatedTime" column="l4_created_time" jdbcType="TIMESTAMP"/>
+            <result property="l5CreatedTime" column="l5_created_time" jdbcType="TIMESTAMP"/>
+            <result property="l6CreatedTime" column="l6_created_time" jdbcType="TIMESTAMP"/>
+            <result property="l7CreatedTime" column="l7_created_time" jdbcType="TIMESTAMP"/>
+            <result property="l8CreatedTime" column="l8_created_time" jdbcType="TIMESTAMP"/>
+            <result property="l9CreatedTime" column="l9_created_time" jdbcType="TIMESTAMP"/>
+            <result property="l63CreatedTime" column="l6_3_created_time" jdbcType="TIMESTAMP"/>
+            <result property="l73CreatedTime" column="l7_3_created_time" jdbcType="TIMESTAMP"/>
+            <result property="l83CreatedTime" column="l8_3_created_time" jdbcType="TIMESTAMP"/>
+            <result property="inspurProvideNamePhone" column="inspur_provide_name_phone" jdbcType="VARCHAR"/>
+            <result property="isInspurProvide" column="is_inspur_provide" jdbcType="VARCHAR"/>
+            <result property="inspurProvideName" column="inspur_provide_name" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        opportunity_id,quotation_id,customer_name,
+        opportunity_num,customer_address_province,customer_address_city,
+        customer_address_district,customer_address_detail,zip_code,
+        customer_main_business,customer_industry,customer_industry_influence,
+        sub_customer_industry,delivery_date,is_old_customer,
+        opportunity_name,opportunity_stage,opportunity_stage_sequence,
+        main_operator_type,channel_name,provider_name,
+        tender_type,customer_project_name,is_shortlisted_require,
+        is_initiation,is_funds_invested,expected_value,
+        focus_point,project_budget,budget_source,
+        expected_tender_date,next_stage_date,background_purpose,
+        background_purpose_notes,project_sponsor_info,customer_benefits,
+        company_benefits,oppotunity_notes,customer_org_notes,
+        opportunity_followup_actions,win_reason,lost_reason,
+        giveup_reason,stop_reason,summary,
+        is_delivered,is_paid,payment_date,
+        is_accepted,creator_id,create_time,
+        operator_id,update_time,owner_id,
+        is_deleted,is_draft,alert_sent_date,
+        is_stage_draft,signing_status,signing_date,
+        signing_comment,leader_info_confirm_flg,leader_visit_customer_flg,
+        leader_valid_opportunity_flg,contract_id,is_filing,
+        filing_time,core_business,channel_id,
+        success_possibility,next_opportunity_stage,expected_sign_date,
+        customer_id,project_used_system,isv_id,
+        isv_name,expected_first_payment_collection_date,bidding_status,
+        system_online_date,db_budget,product_type_id,
+        signed_channel_id,system_chosen_reason,system_start_date,
+        project_has_document,project_has_meeting,project_need_support,
+        is_known_tender_content,is_our_param_in_tender,is_known_tender_process,
+        is_master_tender_process,is_known_all_experts,is_supported_by_experts,
+        competitor_info,l1_created_time,l2_created_time,
+        l3_created_time,l4_created_time,l5_created_time,
+        l6_created_time,l7_created_time,l8_created_time,
+        l9_created_time,l6_3_created_time,l7_3_created_time,
+        l8_3_created_time,inspur_provide_name_phone,is_inspur_provide,
+        inspur_provide_name
+    </sql>
+</mapper>
